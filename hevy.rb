@@ -5,20 +5,20 @@
 class Hevy < Formula
   desc "CLI to manage workouts on Hevy. Includes a skill for ai agents to manage workouts for you."
   homepage ""
-  version "0.0.8"
+  version "0.0.9"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Dor256/hevy-cli/releases/download/v0.0.8/hevy-cli- darwin- x64 .tar.gz"
-      sha256 "ca4fc12907c47134b9adaf895f3479fef5134200ec8d04cce8edf26c38f6cf90"
+      url "https://github.com/Dor256/hevy-cli/releases/download/v0.0.9/hevy-cli-darwin-x64.tar.gz"
+      sha256 "e2f8eacfd172e8188316c9fcddee43fad5530e22185cc30827a3c1c98dca11f6"
 
       define_method(:install) do
         bin.install "hevy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Dor256/hevy-cli/releases/download/v0.0.8/hevy-cli- darwin- arm64.tar.gz"
-      sha256 "47cbbd223f82a559454d8ce2229e07ca0ae0a7a87156b88a30e441f6e89aad71"
+      url "https://github.com/Dor256/hevy-cli/releases/download/v0.0.9/hevy-cli-darwin-arm64.tar.gz"
+      sha256 "e69c4cc6cc78b826efc4368e6282468210faa92172f24860c656b80c6d44c9f0"
 
       define_method(:install) do
         bin.install "hevy"
@@ -28,15 +28,15 @@ class Hevy < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Dor256/hevy-cli/releases/download/v0.0.8/hevy-cli- linux- x64 .tar.gz"
-      sha256 "2b257e7dbff136c6b0cd2c278f98ae04ee7b371fda0a37766351abf54f474aa0"
+      url "https://github.com/Dor256/hevy-cli/releases/download/v0.0.9/hevy-cli-linux-x64.tar.gz"
+      sha256 "483dd69ea46b63ed38e729a5c8463cc92731b0d219290dcaeaf1344b2b5ec451"
       define_method(:install) do
         bin.install "hevy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Dor256/hevy-cli/releases/download/v0.0.8/hevy-cli- linux- arm64.tar.gz"
-      sha256 "42c7fbc7969b402bb0e40124905554a6a755fac1623a846936d4d659d67648a3"
+      url "https://github.com/Dor256/hevy-cli/releases/download/v0.0.9/hevy-cli-linux-arm64.tar.gz"
+      sha256 "23ee2a53be1ee62f39c28a710e92bb0e18680c69718574c3d7c8e380bebafc11"
       define_method(:install) do
         bin.install "hevy"
       end
