@@ -5,20 +5,20 @@
 class Hevy < Formula
   desc "CLI to manage workouts on Hevy. Includes a skill for ai agents to manage workouts for you."
   homepage ""
-  version "0.0.7"
+  version "0.0.8"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Dor256/hevy-cli/releases/download/v0.0.7/hevy-cli_0.0.7_darwin_amd64.tar.gz"
-      sha256 "be156a1aa44162071479c9c2051f57420210b68ffe3110d7ae180d3b4545bc46"
+      url "https://github.com/Dor256/hevy-cli/releases/download/v0.0.8/hevy-cli- darwin- x64 .tar.gz"
+      sha256 "ca4fc12907c47134b9adaf895f3479fef5134200ec8d04cce8edf26c38f6cf90"
 
       define_method(:install) do
         bin.install "hevy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Dor256/hevy-cli/releases/download/v0.0.7/hevy-cli_0.0.7_darwin_arm64.tar.gz"
-      sha256 "ab6226f573da5d7e97c2d278a1ff31060cacc79db8c264eb39884d377656f66c"
+      url "https://github.com/Dor256/hevy-cli/releases/download/v0.0.8/hevy-cli- darwin- arm64.tar.gz"
+      sha256 "47cbbd223f82a559454d8ce2229e07ca0ae0a7a87156b88a30e441f6e89aad71"
 
       define_method(:install) do
         bin.install "hevy"
@@ -28,15 +28,15 @@ class Hevy < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Dor256/hevy-cli/releases/download/v0.0.7/hevy-cli_0.0.7_linux_amd64.tar.gz"
-      sha256 "defa0b3b410f16669ee94cbc1b918c532f63bad2c17621ee700733ff7ec2be2f"
+      url "https://github.com/Dor256/hevy-cli/releases/download/v0.0.8/hevy-cli- linux- x64 .tar.gz"
+      sha256 "2b257e7dbff136c6b0cd2c278f98ae04ee7b371fda0a37766351abf54f474aa0"
       define_method(:install) do
         bin.install "hevy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Dor256/hevy-cli/releases/download/v0.0.7/hevy-cli_0.0.7_linux_arm64.tar.gz"
-      sha256 "bfa91f83c407a4f8e04e19ba3db1c336ab8ce3e8c08ef9048018c676b96812bc"
+      url "https://github.com/Dor256/hevy-cli/releases/download/v0.0.8/hevy-cli- linux- arm64.tar.gz"
+      sha256 "42c7fbc7969b402bb0e40124905554a6a755fac1623a846936d4d659d67648a3"
       define_method(:install) do
         bin.install "hevy"
       end
